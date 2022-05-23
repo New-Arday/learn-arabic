@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./hero.css";
+import "./lesson.css";
 function Quiz() {
   const [lesson, setLesson] = useState(null);
   const [index, setIndex] = useState(0);
@@ -78,38 +79,40 @@ function Quiz() {
 
   return (
     <>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-          <button>Exercise</button>
-        </li>
-      </ul>
-      <div className="quiz-container">
-        {index > 0 && (
-          <button onClick={preLessonWordSlideHandler} className="btn-previous">
-            prev
-          </button>
-        )}
+      <h2 className="title-topic">{lesson.lesson}</h2>
 
-        <ul className="arabic-word">
-          <div className="msg"> {message}</div>
-          <div className="arabic-word-quiz">
-            {lesson.words[index].arabicWord}
-          </div>
+      <div className="quiz-carousel">
+        <p className="msg"> {message}</p>
+
+        <div className=" quiz-arabic-word">
+          {lesson.words[index].arabicWord}
+        </div>
+        <div className="quiz-text">
           {options.map((option) => {
             return (
               <button
-                className="word-options-btns"
+                className="quiz-word-options-btns"
                 onClick={() => optionsHandler(option, currentWord)}
               >
                 {option.englishWord}
               </button>
             );
           })}
-        </ul>
+        </div>
+        {index > 0 && (
+          <button
+            onClick={preLessonWordSlideHandler}
+            className="testimonial-btn quiz-btn-left"
+          >
+            prev
+          </button>
+        )}
 
         {index + 1 < lesson.words.length && (
-          <button onClick={lessonWordSlideHandler} className="btn-next">
+          <button
+            onClick={lessonWordSlideHandler}
+            className="testimonial-btn quiz-btn-right"
+          >
             Next
           </button>
         )}

@@ -54,6 +54,18 @@ function Lesson({ setLessons, lessons }) {
 
   return (
     <>
+      <ul className="lessons">
+        {lessons.map((lesson) => {
+          return (
+            <li key={lesson.id}>
+              <Link to={`/lesson/${lesson.id}`}>{lesson.lesson}</Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      <div>{lessons.lesson}</div>
+
       {finished && (
         <Link to="quiz">
           <button>Quiz</button>
@@ -65,6 +77,7 @@ function Lesson({ setLessons, lessons }) {
         <img src={lesson.words[index].image} alt="" className="lesson-image" />
         <div className=" lesson-text">
           <p className=" arabic-word ">{lesson.words[index].arabicWord}</p>
+
           <p className=" english-word">{lesson.words[index].englishWord}</p>
           <p className="genderType">{lesson.words[index].genderType}</p>
         </div>
@@ -87,7 +100,7 @@ function Lesson({ setLessons, lessons }) {
         {index > 0 && (
           <button
             onClick={preLessonWordSlideHandler}
-            className=" testimonial-btn btn-left"
+            className="testimonial-btn btn-left"
           >
             prev
           </button>

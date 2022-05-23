@@ -9,8 +9,6 @@
 /* color: #333; */
 /* color: #555; */
 html {
-  /* font-family: "Rubik", sans-serif; */
-  /* color: #444; */
   font-size: 62.5%;
 }
 * {
@@ -19,7 +17,6 @@ html {
   box-sizing: border-box;
 }
 body {
-  /* font-family: "Inter", sans-serif; */
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
@@ -29,19 +26,12 @@ body {
   margin: 0 auto;
   width: 1200px;
 }
-header {
+/* header {
   height: 100vh;
   position: relative;
-
-  /* background-image: linear-gradient(
-      rgba(84, 84, 84, 0.6),
-      rgba(84, 84, 84, 0.6)
-    ),
-    url(img/hero-1.jpg); */
   background-image: url(img/hero-1.jpg);
-
   background-size: cover;
-}
+} */
 /* nav {
   font-size: 20px;
   font-weight: 700;
@@ -56,38 +46,38 @@ header {
   margin: 2rem;
   /* height: 9.6rem; */
 }
-.header-container {
+/* .header-container {
   width: 1200px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* text-align: center; */
-}
+  text-align: center;
+} */
 
-.header-container-inner {
+/* .header-container-inner {
   width: 50%;
-}
-.logo {
-  /* border: 2px solid rgb(4, 54, 52);
+} */
+/* .logo { */
+/* border: 2px solid rgb(4, 54, 52);
   position: relative;
   right: 55%;
   top: 50%; */
-  /* width: 30vh; */
+/* width: 30vh; */
 
-  /* border-radius: 50%; */
-  /* padding: 20px;
+/* border-radius: 50%; */
+/* padding: 20px;
   font-size: 40px; */
-}
-h1 {
-  /* font-size: 52px;
+/* } */
+/* h1 { */
+/* font-size: 52px;
   margin-bottom: 32px;
   line-height: 1.05; */
-  font-size: 5.2rem;
+/* font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.05;
-  color: #333;
-}
+  color: #333; */
+/* } */
 
 p {
   font-size: 20px;
@@ -95,7 +85,7 @@ p {
   margin-bottom: 48px;
 }
 
-.btn:link,
+/* .btn:link,
 .btn:visited {
   font-size: 20px;
   font-weight: 600;
@@ -105,7 +95,7 @@ p {
   display: inline-block;
   padding: 16px 32px;
   border-radius: 9px;
-}
+} */
 .hero-img {
   width: 100%;
 }
@@ -115,16 +105,15 @@ h2 {
 }
 
 section {
-  background-color: #f7f7f7;
-
+  background-color: #b8a9c0;
   padding: 96px 0;
 }
-.cards-section {
+/* .cards-section {
   background-color: #bdbfa6;
-}
-.cards {
+} */
+/* .cards {
   display: flex;
-}
+} */
 
 .footer {
   background-color: rgba(4, 54, 52);
@@ -158,7 +147,7 @@ LAYERED SECTION - AFTER HERO
 }
 .layered-images {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  /* padding: 9.6rem 0; */
 }
 .layered-btn:link,
 .layered-btn:visited {
@@ -247,43 +236,5 @@ LAYERED SECTION - AFTER HERO
 }
 .how-it-works-title,
 .lessons-list-title {
-  text-align: center;
-}
-
-/*QUIZ*/
-
-.quiz-container {
-  background-color: darkslategrey;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  width: 80rem;
-  margin: 0 auto;
-  margin-top: 20rem;
-  padding: 3rem 1rem;
-}
-.arabic-word-quiz {
-  display: flex;
-  justify-content: center;
-  color: aqua;
-}
-.word-options-btns,
-.genderType-prev {
-  background-color: #eb7e22;
-  padding: 1rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 1px;
-}
-.genderType-prev {
-  background-color: #b3d4fc;
-}
-.fem-words {
-  text-align: center;
-  margin-top: 0;
-}
-.msg {
-  margin-bottom: 6rem;
-  font-size: 1.8rem;
   text-align: center;
 }
