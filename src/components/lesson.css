@@ -1,169 +1,93 @@
-/* .lesson-container {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  grid-template-rows: 1fr 1fr 100px;
-  grid-template-areas:
-    "header header header header"
-    "main main main sidebar"
-    "footer footer footer footer";
-} */
-/* .header-lesson {
-  margin: 0 auto;
-  display: inline-block;
-  grid-area: header;
+.lesson-carousel {
+  background-color: #125b50;
+  width: 70%;
+  margin: 10rem auto;
+  padding: 3.2rem 4.8rem 3.2rem 10.6rem;
+  border-radius: 0.8rem;
   position: relative;
-  width: 70vw;
-  height: 100vh;
+
   display: flex;
-  justify-content: start;
   align-items: center;
-} */
-/* .header-lesson::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 13rem;
-  width: 100%;
-  height: 100%;
-  background: url(img/logo-brain.jpg);
-  background-repeat: no-repeat;
-  background-size: calc(80%);
-  background-position: calc(200%);
-  filter: brightness(100%);
-  display: inline-block;
-} */
-.test-wrap::before {
-  /* background-color: rgb(167, 167, 216); */
-
-  display: flex;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 13rem;
-  width: 100%;
-  height: 100%;
-  background: url(img/logo-brain.jpg);
-  background-repeat: no-repeat;
-  background-size: calc(73%);
-  background-position: calc(150%);
-  filter: brightness(100%);
+  gap: 20.6rem;
 }
+
+.lesson-image {
+  height: 20rem;
+  border-radius: 0.8rem;
+  transform: scale(1.5);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
+}
+
 .arabic-word {
-  font-size: 8.8rem;
-  font-weight: 700;
-  justify-items: center;
-  /* position: absolute; */
-}
-/* .word-content {
-  display: flex;
-} */
-.img-words {
-  width: 20%;
-  border-radius: 1rem;
-  display: inline-block;
-  margin-top: 0;
-}
-.title-topic {
-  /* display: inline-block; */
-  /* margin-bottom: 0; */
-  margin-top: 4rem;
-
-  text-align: start;
-}
-.lesson-cont {
-  /* width: 80%; */
-  margin-left: 10rem;
-}
-.word-content {
-  /* background-color: blue; */
-  margin-top: 15rem;
-}
-/* .main {
-  grid-area: main;
-  margin-top: 5rem;
-  padding: 4rem;
-} */
-/* .sidebar {
-  grid-area: sidebar;
-  height: 100%;
-  
-} */
-/* .footer {
-  grid-area: footer;
- 
-} */
-
-/* .arabic-word {
-  font-size: 8.8rem;
-  font-weight: 700;
-  justify-items: center;
+  font-size: 10.8rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+  color: #dbe3f0;
 }
 .english-word {
-  font-size: 3rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+  color: #dbe3f0;
 }
-.img-words {
-  width: 40%;
+.genderType {
+  font-size: 1.2rem;
+  color: #dbe3f0;
 }
-.word-content {
-  display: flex;
-  justify-content: space-evenly;
+.title-topic {
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #021d19;
+  text-align: center;
 }
+.lesson-paragraph {
+  font-size: 1.8rem;
+  color: #021d19;
+  text-align: center;
+}
+/* CONTROLS */
+.lesson-btn {
+  background-color: #f87000;
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 
-.lesson-content {
-  display: grid;
-  row-gap: 2rem;
-}
-.headers-img {
-}
-.header-img-text {
   display: flex;
-  gap: 2rem;
-  justify-content: space-evenly;
-  position: relative;
-}
-.topic-title-and-text {
-  color: #bdbfa6;
-}
-li {
-  list-style: none;
-}
-.list-of-lessons {
-}
-
-.list-of-lessons-section {
-  background-color: rgb(1, 1, 14);
-}
-
-.list-of-lessons-container {
-  padding: 2rem;
-  display: flex;
+  align-items: center;
   justify-content: center;
 }
-.lessons-lists {
-  border: #333 1px solid;
-  padding: 1rem;
-  margin-right: 2rem;
-  border-radius: 10px;
 
-  background-color: rgb(102, 101, 116);
+.btn-left {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
-.ul-words {
+.btn-right {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.lesson-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 3.2rem);
   display: flex;
-  gap: 3rem;
+  gap: 1.2rem;
 }
-.btn-previous,
-.btn-next {
-  background-color: #eb7e22;
-  display: inline-block;
-  border-radius: 2rem;
-  padding: 1rem;
-} */
-.btn-previous,
-.btn-next {
-  /* background-color: #eb7e22; */
-  display: inline-block;
-  border-radius: 2rem;
-  padding: 1rem;
-  border: none;
+
+.lesson-dot {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #fff;
+  border: 2px solid #0a2540;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot-fill {
+  background-color: #125b50;
 }
