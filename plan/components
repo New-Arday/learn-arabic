@@ -1,0 +1,10 @@
+# Components - sections:
+
+- Hero + logo & navigation
+- How it works - lesson => exercise => quize
+- lessons & quize
+- Testimonials
+- lessons - subcomponent for each lesson
+- Quize - subcomponent for each lesson
+- Footer - display in every page
+- heading - for lesson & quize page (ask ideas/ if it's good idea)

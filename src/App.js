@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Home from "./components/Home";
+// import Test from "./components/Test";
+import Hero from "./components/Hero";
+import Lessons from "./components/Lessons";
+import Lesson from "./components/Lesson";
+import Quiz from "./components/Quiz";
+import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import Header from "./components/Header";
+// import GridLayoutPractice from "./components/GridLayoutPractice";
 function App() {
+  const [lessons, setLessons] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} lessons={lessons} />
+        <Route path="/#test" element={<Home />} />
+
+        <Route path="/hero" element={<Hero />} />
+        <Route
+          path="/lessons"
+          element={<Lessons lessons={lessons} setLessons={setLessons} />}
+        />
+        <Route path="/lesson/:id/quiz" element={<Quiz />} />
+        <Route
+          path="/lesson/:id"
+          element={<Lesson lessons={lessons} setLessons={setLessons} />}
+        />
+
+        <Route path="/footer" element={<Footer />} />
+      </Routes>
+    </>
   );
 }
 
