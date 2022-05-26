@@ -1,13 +1,3 @@
-/* background-color: #b3d4fc;
-/* background-color: rgb(149, 144, 143); */
-/* background-color: #0a2540; */
-/* background-color: #b8a9c0; */
-/* background-color: #eb7e22; */
-/* background-color: #fbe5d3; */
-/* background-color: #fdf2e9; */
-/* background-color: #edeeff; */
-/* color: #333; */
-/* color: #555; */
 html {
   font-size: 62.5%;
 }
@@ -22,98 +12,62 @@ body {
   font-weight: 400;
   color: #555;
 }
-.container {
-  margin: 0 auto;
-  width: 1200px;
-}
-/* header {
-  height: 100vh;
-  position: relative;
-  background-image: url(img/hero-1.jpg);
-  background-size: cover;
-} */
-/* nav {
-  font-size: 20px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
+
+.logo {
   padding-top: 32px;
-} */
-.main-nav li {
-  display: flex;
-  justify-content: end;
-  gap: 2rem;
-  margin: 2rem;
-  /* height: 9.6rem; */
 }
-/* .header-container {
-  width: 1200px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-} */
-
-/* .header-container-inner {
-  width: 50%;
-} */
-/* .logo { */
-/* border: 2px solid rgb(4, 54, 52);
-  position: relative;
-  right: 55%;
-  top: 50%; */
-/* width: 30vh; */
-
-/* border-radius: 50%; */
-/* padding: 20px;
-  font-size: 40px; */
-/* } */
-/* h1 { */
-/* font-size: 52px;
-  margin-bottom: 32px;
-  line-height: 1.05; */
-/* font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #333; */
-/* } */
 
 p {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 48px;
 }
-
-/* .btn:link,
-.btn:visited {
-  font-size: 20px;
-  font-weight: 600;
-  background-color: rgb(4, 54, 52);
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  padding: 16px 32px;
-  border-radius: 9px;
-} */
+.home-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 .hero-img {
   width: 100%;
 }
-h2 {
+.hero-main-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 130vh;
+  position: relative;
+  background-size: cover;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(img/kid-learning.jpg);
+}
+.header-container {
+  width: 120rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-container-space {
+  width: 50%;
+}
+h1 {
   font-size: 44px;
   margin-bottom: 48px;
 }
 
-section {
-  background-color: #b8a9c0;
-  padding: 96px 0;
+.arabic-title {
+  font-size: 34px;
+  position: absolute;
+  top: -14rem;
 }
-/* .cards-section {
-  background-color: #bdbfa6;
-} */
-/* .cards {
-  display: flex;
-} */
+
+section {
+  padding: 9.6rem 0;
+}
 
 .footer {
   background-color: rgba(4, 54, 52);
@@ -122,21 +76,15 @@ section {
 /*
 LAYERED SECTION - AFTER HERO
 */
-.layered {
-  max-width: 130rem;
-  /* background-color: #b8a9c0; */
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
-  align-items: center;
-}
+
 /* this should be styles as h2*/
 .heading-secondary {
-  font-size: 5.2rem;
+  font-size: 44px;
+  margin-bottom: 48px;
+  /* font-size: 5.2rem; */
   font-weight: 700;
   line-height: 1.05;
-  color: #333;
+  color: #fff;
   letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
 }
@@ -161,6 +109,20 @@ LAYERED SECTION - AFTER HERO
 
   transition: background-color 0.3s;
 }
+
+.lesson-btn:link,
+.lesson-btn:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  transition: background-color 0.3s;
+}
+
 .btn--full:link,
 .btn--full:visited {
   background-color: #eb7e22;
@@ -178,9 +140,6 @@ LAYERED SECTION - AFTER HERO
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #fff;
-
-  /* border: 3px solid #fff; */
-  /* Add border inside- use the INSET keyword that comes with the BOX-SHADOW */
   box-shadow: inset 0 0 0 3px #fff;
 }
 
@@ -218,23 +177,29 @@ LAYERED SECTION - AFTER HERO
 .list {
   list-style-type: none;
 }
+.list-icons {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-right: 1rem;
+  color: blue;
+}
+.list-icon {
+  height: 10rem;
+  width: 10rem;
+  border: solid 2rem green;
+  border-radius: 50%;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  background-color: #eb7e22;
+  padding: 0.7rem;
+  color: rgb(228, 228, 237);
+}
+.list-icon:hover {
+  background-color: #fff;
+}
+.arrow-icon {
+  height: 2.4rem;
+  width: 2.4rem;
 
-/* HOW IT WORKS SECTION */
-
-.how-it-works {
-  background-color: #b3d4fc;
-}
-.how-it-works-container {
-  /* background-color: #b3d4fc; */
-  display: flex;
-  justify-content: space-evenly;
-}
-.how-it-works-cards {
-  border: #333 solid 1px;
-  padding: 2rem;
-  margin: 0 1rem;
-}
-.how-it-works-title,
-.lessons-list-title {
-  text-align: center;
+  color: blue;
 }

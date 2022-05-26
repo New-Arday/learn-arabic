@@ -11,27 +11,30 @@ function Lessons({ setLessons, lessons }) {
   }, []);
   console.log("log lessons", lessons);
   return (
-    <>
-      <section className="middle-section">
-        <div className="sidebar">
-          <h2>Lessons</h2>
-          <ol>
+    <div className="lessons-container">
+      <div className="list-of-lessons-bg" id="lessons">
+        <section className="list-of-lessons-section  cards grid--1-cols grid">
+          <h2 className="lessons-list-title heading-secondary-how ">
+            Choose a topic to explore
+          </h2>
+          <ul className="list-of-lessons-container ">
             {lessons.map((lesson) => {
               return (
-                <li key={lesson.id}>
-                  <div className="list-of-lessons">
-                    {lesson.lesson}
-                    <Link to={`/lesson/${lesson.id}`}>
-                      <button>Start</button>
-                    </Link>
+                <div key={lesson.id} className="lessons-lists">
+                  <div className="topic-img">
+                    {" "}
+                    <img src={lesson.image} />
                   </div>
-                </li>
+                  <Link to={`/lesson/${lesson.id}`} className="topic-name">
+                    <div className="topic-name"> {lesson.lesson}</div>
+                  </Link>
+                </div>
               );
             })}
-          </ol>
-        </div>
-      </section>
-    </>
+          </ul>
+        </section>
+      </div>
+    </div>
   );
 }
 

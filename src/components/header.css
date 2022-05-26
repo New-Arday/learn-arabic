@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgba(14, 83, 85, 0.646); */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.main-nav {
+  display: flex;
+  gap: 3.2rem;
+}
+.links:link,
+.links:visited {
+  text-decoration: none;
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.links:hover,
+.links:active {
+  color: rgb(222, 242, 233);
+}
+.text-logo {
+  height: 2.2rem;
+}
+.links {
+  text-decoration: none;
+  color: rgb(92, 21, 21);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.nav-cta {
+}

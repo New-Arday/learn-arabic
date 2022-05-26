@@ -14,18 +14,23 @@ function App() {
   const [lessons, setLessons] = useState([]);
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} lessons={lessons} />
-        <Route path="/#test" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home lessons={lessons} setLessons={setLessons} />}
+        />
 
         <Route path="/hero" element={<Hero />} />
         <Route
           path="/lessons"
           element={<Lessons lessons={lessons} setLessons={setLessons} />}
         />
-        <Route path="/lesson/:id/quiz" element={<Quiz />} />
+        <Route
+          path="/lesson/:id/quiz"
+          element={<Quiz element={<Header />} />}
+        />
         <Route
           path="/lesson/:id"
           element={<Lesson lessons={lessons} setLessons={setLessons} />}

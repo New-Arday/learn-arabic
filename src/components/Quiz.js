@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./hero.css";
 import "./lesson.css";
-function Quiz() {
+import Header from "./Header";
+function Quiz({ setLessons, lessons }) {
   const [lesson, setLesson] = useState(null);
   const [index, setIndex] = useState(0);
   const [message, setMessage] = useState("");
@@ -15,11 +16,10 @@ function Quiz() {
     if (!id) {
       return <></>;
     }
-    // console.log("making fetch request - quizPage", id);
+
     fetch(`http://localhost:3030/lesson/${id}`)
       .then((res) => res.json())
       .then((json) => {
-        // console.log("What's showing - quizPage", json);
         setLesson(json.lesson);
       });
   }, [id]);
@@ -42,7 +42,6 @@ function Quiz() {
   const currentWord = lesson.words[index];
   const otherWords = lesson.words.filter((word) => word != currentWord);
   console.log(otherWords);
-  // randomize array
 
   function shuffleOtherWords(otherWords) {
     console.log("logging  otherWords:", otherWords);
@@ -52,7 +51,7 @@ function Quiz() {
     }
   }
   shuffleOtherWords(otherWords);
-  //////
+
   const options = [otherWords[0], otherWords[1], currentWord];
   console.log("logging  options:", options);
   function shuffleOptions(options) {
@@ -68,17 +67,28 @@ function Quiz() {
       // countCorrect + 1;
       score += countCorrect;
       setMessage("Correct!");
-      // setMessage("");
     } else {
       // countIncorrect - 1;
       score += countIncorrect;
       setMessage("Incorrect, try again");
-      // setMessage("");
     }
   };
 
   return (
     <>
+      <Header />
+      {/* <ul>
+        {lessons.map((lesson) => {
+          return (
+            <li key={lesson.id}>
+              <div className="list-of-lessons">
+                {lesson.lesson}
+                <Link to={`/lesson/${lesson.id}`}>{lesson.lesson}</Link>
+              </div>
+            </li>
+          );
+        })}
+      </ul> */}
       <h2 className="title-topic">{lesson.lesson}</h2>
 
       <div className="quiz-carousel">

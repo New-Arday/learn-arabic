@@ -1,15 +1,17 @@
 /* LESSON PAGE STYLING*/
 .lesson-carousel {
   background-color: #125b50;
-  width: 70%;
-  margin: 10rem auto;
+  max-width: 85rem;
+  margin: 0 auto;
   padding: 3.2rem 4.8rem 3.2rem 10.6rem;
+
   border-radius: 0.8rem;
   position: relative;
 
   display: flex;
   align-items: center;
-  gap: 20.6rem;
+  gap: 13.6rem;
+  /* gap: 20.6rem; */
 }
 
 .lesson-image {
@@ -40,6 +42,8 @@
   font-weight: 600;
   color: #021d19;
   text-align: center;
+  margin-bottom: 4rem;
+  /* padding: 4.8rem 0 9.6rem 0; */
 }
 .lesson-paragraph {
   font-size: 1.8rem;
@@ -104,87 +108,11 @@
 }
 
 /*QUIZ*/
-/* 
-.quiz-container {
-  background-color: darkslategrey;
-  border: solid 3rem darkslategrey;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  width: 80rem;
-  margin: 0 auto;
-  margin-top: 20rem;
-  padding: 3rem 1rem;
-}
-.arabic-word-quiz {
-  display: flex;
-  justify-content: center;
-  color: rgb(32, 54, 54);
-}
-.word-options-btns,
-.genderType-prev {
-  background-color: darkslategrey;
-  padding: 1rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 1px;
-} */
-/* .genderType-prev {
-  background-color: #b3d4fc;
-} */
-/* .fem-words {
-  text-align: center;
-  margin-top: 0;
-} */
-/* .msg {
-  margin-bottom: 6rem;
-  font-size: 1.8rem;
-  text-align: center;
-  color: darkslategrey;
-}
-
-.btn-previous {
-} */
-/*//////////////////////*/
-/* .layered-btn:link,
-.layered-btn:visited {
-  display: inline-block;
-
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-
-  transition: background-color 0.3s;
-}
-.btn--full:link,
-.btn--full:visited {
-  background-color: #eb7e22;
-  color: #fff;
-}
-.btn--full:hover,
-.btn--full:active {
-  background-color: rgb(4, 54, 52);
-}
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-} */
-/* .btn--outline:hover,
-.btn--outline:active {
-  background-color: #fff;
-
-  
-  box-shadow: inset 0 0 0 3px #fff;
-} */
-/*/////////////////////////////////////*/
 .quiz-carousel {
-  /* background-color: #125b50; */
   border: solid 2rem #125b50;
-  width: 60%;
-  margin: 10rem auto;
+  max-width: 85rem;
+  margin: 0 auto;
+  margin-top: 10rem;
   padding: 3.2rem 4.8rem 3.2rem 10.6rem;
   border-radius: 0.8rem;
   position: relative;
@@ -212,24 +140,24 @@
   font-weight: 600;
   color: #021d19;
   text-align: center;
+  margin-top: 4rem;
 }
 
 .quiz-btn-left {
   left: -4.5rem;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #09302a;
   color: #fff;
+  background-color: #125b50;
 }
 .quiz-btn-right {
   right: -4.5rem;
   top: 50%;
   transform: translate(50%, -50%);
-  background-color: #09302a;
   color: #fff;
+  background-color: #125b50;
 }
 .quiz-word-options-btns {
-  /* background-color: darkslategrey; */
   padding: 1rem;
   margin: 1rem;
   border: none;
@@ -238,13 +166,13 @@
 
 .quiz-word-options-btns,
 .quiz-word-options-btns {
-  background-color: rgb(38, 71, 61);
+  background-color: #125b50;
   color: #fff;
 }
 
 .quiz-word-options-btns:hover,
 .quiz-word-options-btns:active {
-  background-color: rgb(120, 149, 17);
+  background-color: rgb(111, 161, 150);
   box-shadow: inset 0 0 0 3px #fff;
 }
 .msg {

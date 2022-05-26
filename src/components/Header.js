@@ -1,16 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import "./header.css";
 function Header() {
   return (
     <>
-      <nav className="main-nav">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-            <button>Lessons</button>
-          </li>
-        </ul>
-      </nav>
+      <header className="header">
+        <h1 className="text-log"> مِفْتَاحٌالْعَرَبِيَّة</h1>
+        <nav className="main-nav">
+          <ul className="nav-list">
+            <li>
+              <Link to="/" className="links">
+                Home
+              </Link>
+            </li>
+            <li className="links nav-cta">
+              <Link to="/#lessons" className="links">
+                Lessons
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </>
   );
 }

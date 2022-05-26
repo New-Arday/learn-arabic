@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "./lesson.css";
 
 function Lesson({ setLessons, lessons }) {
@@ -54,11 +55,14 @@ function Lesson({ setLessons, lessons }) {
 
   return (
     <>
+      <Header />
       <ul className="lessons">
         {lessons.map((lesson) => {
           return (
             <li key={lesson.id}>
-              <Link to={`/lesson/${lesson.id}`}>{lesson.lesson}</Link>
+              <Link to={`/lesson/${lesson.id}`}>
+                {lesson.lesson} className="links"
+              </Link>
             </li>
           );
         })}
@@ -106,12 +110,12 @@ function Lesson({ setLessons, lessons }) {
           </button>
         )}
 
-        <div className="lesson-dots">
+        {/* <div className="lesson-dots">
           <button className="lesson-dot dot-fill"> </button>
           <button className="lesson-dot"> </button>
           <button className="lesson-dot"> </button>
           <button className="lesson-dot"> </button>
-        </div>
+        </div> */}
       </div>
     </>
   );
