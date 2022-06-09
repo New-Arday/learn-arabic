@@ -1,15 +1,16 @@
 import React from "react";
 import { useEffect } from "react";
-
+import "./media.css";
 import { Link } from "react-router-dom";
-
+const URL = process.env.REACT_APP_API_URL;
+console.log(process.env);
 function Lessons({ setLessons, lessons }) {
   useEffect(() => {
-    fetch("http://localhost:3030/lesson")
+    fetch(`${URL}/lesson`)
       .then((res) => res.json())
       .then((json) => setLessons(json.lessons));
-  }, []);
-  console.log("log lessons", lessons);
+  }, [setLessons]);
+
   return (
     <div className="lessons-container">
       <div className="list-of-lessons-bg" id="lessons">
@@ -23,7 +24,7 @@ function Lessons({ setLessons, lessons }) {
                 <div key={lesson.id} className="lessons-lists">
                   <div className="topic-img">
                     {" "}
-                    <img src={lesson.image} />
+                    <img src={lesson.image} alt="" />
                   </div>
                   <Link to={`/lesson/${lesson.id}`} className="topic-name">
                     <div className="topic-name"> {lesson.lesson}</div>

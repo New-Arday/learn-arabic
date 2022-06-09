@@ -1,14 +1,14 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./header.css";
-function Header() {
+import "./media.css";
+function Header({ displayQuizBtn }) {
   return (
     <>
       <header className="header">
-        <h1 className="text-log"> مِفْتَاحٌالْعَرَبِيَّة</h1>
         <nav className="main-nav">
           <ul className="nav-list">
-            <li>
+            <li className="links nav-cta">
               <Link to="/" className="links">
                 Home
               </Link>
@@ -18,6 +18,13 @@ function Header() {
                 Lessons
               </Link>
             </li>
+            {displayQuizBtn && (
+              <li className="quiz-nav">
+                <Link to="quiz" className="links">
+                  Quiz
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </header>

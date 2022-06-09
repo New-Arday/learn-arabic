@@ -1,23 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "./Header";
 import "./lesson.css";
-
+import "./media.css";
+import "./quiz.css";
+const URL = process.env.REACT_APP_API_URL;
 function Lesson({ setLessons, lessons }) {
   const [lesson, setLesson] = useState(null);
   const [index, setIndex] = useState(0);
-  const [finished, setFinished] = useState(false);
-
+  const displayQuizBtn = true;
   const params = useParams();
 
-  /* GET All lessons */
   useEffect(() => {
-    fetch("http://localhost:3030/lesson")
+    fetch(`${URL}/lesson`)
       .then((res) => res.json())
       .then((json) => setLessons(json.lessons));
-  }, []);
+  }, [setLessons]);
 
   const id = params.id;
   useEffect(() => {
@@ -25,7 +24,7 @@ function Lesson({ setLessons, lessons }) {
       return;
     }
 
-    fetch(`http://localhost:3030/lesson/${id}`)
+    fetch(`${URL}/lesson/${id}`)
       .then((res) => res.json())
       .then((json) => {
         setLesson(json.lesson);
@@ -38,43 +37,16 @@ function Lesson({ setLessons, lessons }) {
   const lessonWordSlideHandler = () => {
     setIndex(index + 1);
   };
-  const finishLessonHandler = () => {
-    setFinished(true);
-  };
   const preLessonWordSlideHandler = () => {
     setIndex(index - 1);
   };
-  // console.log("logging lesson lesson page - line 42:", lesson);
-
-  // const masculine = lesson.words.filter(
-  //   (word) => word.genderType === "Masculine"
-  // );
-
-  // console.log("logging masculine:", masculine);
-  // console.log("logging feminine:", feminine);
 
   return (
     <>
-      <Header />
-      <ul className="lessons">
-        {lessons.map((lesson) => {
-          return (
-            <li key={lesson.id}>
-              <Link to={`/lesson/${lesson.id}`}>
-                {lesson.lesson} className="links"
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Header displayQuizBtn={displayQuizBtn} />
 
       <div>{lessons.lesson}</div>
 
-      {finished && (
-        <Link to="quiz">
-          <button>Quiz</button>
-        </Link>
-      )}
       <h2 className="title-topic">{lesson.lesson}</h2>
       <p className="lesson-paragraph">{lesson.paragraph}</p>
       <div className="lesson-carousel">
@@ -94,12 +66,7 @@ function Lesson({ setLessons, lessons }) {
           </button>
         )}
         {index + 1 === lesson.words.length && (
-          <button
-            onClick={finishLessonHandler}
-            className="lesson-btn btn-right"
-          >
-            END
-          </button>
+          <button className="lesson-btn btn-right">END</button>
         )}
         {index > 0 && (
           <button
@@ -109,13 +76,6 @@ function Lesson({ setLessons, lessons }) {
             prev
           </button>
         )}
-
-        {/* <div className="lesson-dots">
-          <button className="lesson-dot dot-fill"> </button>
-          <button className="lesson-dot"> </button>
-          <button className="lesson-dot"> </button>
-          <button className="lesson-dot"> </button>
-        </div> */}
       </div>
     </>
   );

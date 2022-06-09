@@ -2,36 +2,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: rgba(14, 83, 85, 0.646); */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
-.main-nav {
+
+.nav-list {
+  list-style: none;
   display: flex;
   gap: 3.2rem;
 }
 .links:link,
 .links:visited {
+  display: inline-block;
   text-decoration: none;
-  color: rgb(68, 68, 68);
+  color: #fff;
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
 }
 .links:hover,
 .links:active {
-  color: rgb(222, 242, 233);
+  color: rgb(18, 67, 45);
 }
 .text-logo {
   height: 2.2rem;
 }
-.links {
-  text-decoration: none;
-  color: rgb(92, 21, 21);
-  font-weight: 500;
-  font-size: 1.8rem;
-  transition: all 0.3s;
-}
 
 .nav-cta {
+  color: #fff;
+  border-radius: 9px;
+  padding: 1.6rem 3.2rem;
+  background-color: rgba(3, 72, 74, 0.646);
+}
+.quiz-nav {
+  color: rgba(3, 72, 74, 0.646);
+  border-radius: 9px;
+  padding: 1.6rem 3.2rem;
+
+  background-color: #eb7e22;
 }

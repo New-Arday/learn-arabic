@@ -1,14 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./hero.css";
 import "./lesson.css";
 import Header from "./Header";
-function Quiz({ setLessons, lessons }) {
+const URL = process.env.REACT_APP_API_URL;
+
+function Quiz() {
   const [lesson, setLesson] = useState(null);
   const [index, setIndex] = useState(0);
   const [message, setMessage] = useState("");
+  const displayQuizBtn = false;
   const params = useParams();
 
   const id = params.id;
@@ -17,7 +19,7 @@ function Quiz({ setLessons, lessons }) {
       return <></>;
     }
 
-    fetch(`http://localhost:3030/lesson/${id}`)
+    fetch(`${URL}/lesson/${id}`)
       .then((res) => res.json())
       .then((json) => {
         setLesson(json.lesson);
@@ -35,16 +37,11 @@ function Quiz({ setLessons, lessons }) {
     setIndex(index - 1);
     setMessage("");
   };
-  const countCorrect = 0;
-  const countIncorrect = 0;
-  let score = 0;
 
   const currentWord = lesson.words[index];
-  const otherWords = lesson.words.filter((word) => word != currentWord);
-  console.log(otherWords);
+  const otherWords = lesson.words.filter((word) => word !== currentWord);
 
   function shuffleOtherWords(otherWords) {
-    console.log("logging  otherWords:", otherWords);
     for (let i = otherWords.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [otherWords[i], otherWords[j]] = [otherWords[j], otherWords[i]];
@@ -53,9 +50,8 @@ function Quiz({ setLessons, lessons }) {
   shuffleOtherWords(otherWords);
 
   const options = [otherWords[0], otherWords[1], currentWord];
-  console.log("logging  options:", options);
+
   function shuffleOptions(options) {
-    console.log("logging  options:", options);
     for (let i = options.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [options[i], options[j]] = [options[j], options[i]];
@@ -64,43 +60,27 @@ function Quiz({ setLessons, lessons }) {
   shuffleOptions(options);
   const optionsHandler = (option) => {
     if (option === currentWord) {
-      // countCorrect + 1;
-      score += countCorrect;
       setMessage("Correct!");
     } else {
-      // countIncorrect - 1;
-      score += countIncorrect;
       setMessage("Incorrect, try again");
     }
   };
 
   return (
     <>
-      <Header />
-      {/* <ul>
-        {lessons.map((lesson) => {
-          return (
-            <li key={lesson.id}>
-              <div className="list-of-lessons">
-                {lesson.lesson}
-                <Link to={`/lesson/${lesson.id}`}>{lesson.lesson}</Link>
-              </div>
-            </li>
-          );
-        })}
-      </ul> */}
-      <h2 className="title-topic">{lesson.lesson}</h2>
+      <Header displayQuizBtn={displayQuizBtn} />
 
+      <h2 className="title-topic">{lesson.lesson}</h2>
       <div className="quiz-carousel">
         <p className="msg"> {message}</p>
-
         <div className=" quiz-arabic-word">
           {lesson.words[index].arabicWord}
         </div>
         <div className="quiz-text">
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
               <button
+                key={index}
                 className="quiz-word-options-btns"
                 onClick={() => optionsHandler(option, currentWord)}
               >
