@@ -1,7 +1,7 @@
 import React from "react";
-import AdultLearning from "./img/adult.jpg";
-import ParentAndChildLearning from "./img/parent-child-learning.jpg";
-import ChildrenLearning from "./img/kids-using-laptop.jpg";
+import AdultLearning from "./img/adult-min.jpg";
+import ParentAndChildLearning from "./img/parent-child-learning-min.jpg";
+import ChildrenLearning from "./img/kids-using-laptop-min.jpg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./home.css";

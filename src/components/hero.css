@@ -1,3 +1,4 @@
+
 html {
   font-size: 62.5%;
 }
@@ -31,9 +32,23 @@ p {
   width: 100%;
 }
 .hero-main-page {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  color: #fff;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(img/kid-learning-min.jpg);
+}
+/* .hero-main-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 130vh;
+  height: 100vh;
   position: relative;
   background-size: cover;
   color: #fff;
@@ -42,7 +57,7 @@ p {
       rgba(34, 34, 34, 0.6)
     ),
     url(img/kid-learning.jpg);
-}
+} */
 .header-container {
   width: 120rem;
   position: absolute;
@@ -55,7 +70,7 @@ p {
   width: 50%;
 }
 h1 {
-  font-size: 44px;
+  font-size: var(--fs-h1);
   margin-bottom: 48px;
 }
 
@@ -76,7 +91,7 @@ section {
 }
 
 .heading-secondary {
-  font-size: 44px;
+  font-size: var(--fs-body);
   margin-bottom: 48px;
   font-weight: 700;
   line-height: 1.05;
@@ -151,4 +166,23 @@ section {
 }
 .list-icon:hover {
   background-color: #fff;
+}
+
+@media only screen and (max-width:360px){
+  .hero-main-page {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    color: #fff;
+    background-color:blue;
+    /* background-image: linear-gradient(
+        rgba(34, 34, 34, 0.6),
+        rgba(34, 34, 34, 0.6)
+      ),
+      url(img/kid-learning.jpg);
+      */
+  }
 }
