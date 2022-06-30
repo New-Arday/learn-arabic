@@ -1,7 +1,23 @@
-:root{ 
-  --fs-h1:5rem;
-  --fs-body:1rem;
+html {
+  font-size: 62.5%;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+/* :root {
+  --fs-h1: 5rem;
+  --fs-h2: 4.4rem;
+  --fs-body: 1rem;
+} */
+/*
 .App {
   text-align: center;
 }
@@ -45,4 +61,4 @@
     --fs-h1:4rem;
     --fs-body:0.9rem;
   }
-}
+} */
