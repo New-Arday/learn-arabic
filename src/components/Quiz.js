@@ -67,7 +67,7 @@ function Quiz() {
   };
 
   return (
-    <>
+    <div className="quiz-bg-container">
       <Header displayQuizBtn={displayQuizBtn} />
 
       <h2 className="title-topic">{lesson.lesson}</h2>
@@ -107,7 +107,7 @@ function Quiz() {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

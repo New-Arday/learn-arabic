@@ -1,90 +1,123 @@
 .how-it-works-bg {
-  background-color: #0a2540;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-/* .section-how-it-works {
-  padding: 9.6rem 0;
-  font-size: 44px;
-  margin-bottom: 48px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #555;
-  letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
-  letter-spacing: 0.75px;
-  transform: scale(0.7);
-} */
+  /* mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+  padding: 10rem 10rem 0 10rem;
 
-.how-it-works-container {
-  max-width: 100rem;
-  padding: 6.2rem;
-  margin: 0 auto;
+  /* transform: scale(0.9); */
 }
 
 .howItWorks-title {
   font-size: 4.4rem;
-  color: #fff;
-  line-height: 1.2;
-  padding-top: 7rem;
-  margin-bottom: 13rem;
+  color: #444;
+  letter-spacing: 0.3rem;
   text-align: center;
+  margin: 5rem auto;
+  /* padding-top: 10rem; */
+}
+
+.how-it-works-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 9rem;
+  position: relative;
+}
+
+.text-box {
+  text-align: center;
+  background-color: #ffe066;
+  box-shadow: 0px 5px 10px 0;
+}
+
+.margin-top-space {
+  margin-top: 9rem;
 }
 .heading-h3 {
   font-size: 3rem;
-  line-height: 1.2rem;
-  margin-bottom: 3.2rem;
-  color: #fff;
+  letter-spacing: 0.3rem;
+  color: #0a2540;
+  margin-bottom: 1rem;
+  margin-top: 0.7rem;
 }
-/* .sub-heading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
-  margin-left: 6rem;
-} */
 
 .steps {
   font-size: 8.6rem;
   font-weight: 600;
-  color: rgb(16, 23, 165);
-  margin-bottom: 1.2rem;
+  color: rgb(148, 150, 194);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
+#display-on-media {
+  display: none;
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: green;
+}
+.image-box {
+  background-color: #0a2540;
+  padding: 12rem;
+  position: relative;
+  max-width: 40%;
+  max-height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .list-icon {
   height: 10rem;
-  width: 10rem;
   border: solid 2rem green;
   border-radius: 50%;
-  margin-left: 3rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #eb7e22;
-  padding: 0rem;
+  padding: 0.5rem;
   color: blue;
-  font-size: 1rem;
 }
 .list-icon:hover {
   background-color: #fff;
 }
 .description {
+  display: inline-block;
   line-height: 1.8rem;
   list-style: none;
   font-size: 2rem;
-  color: #fff;
+  color: #444;
   font-weight: 400;
   line-height: 1.5;
+  max-width: 60%;
+  letter-spacing: 0.1rem;
+  margin-bottom: 6rem;
+}
+.a-display--block {
+  display: block;
 }
 
-.image-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.left-arrow {
   position: relative;
-  margin-bottom: 9rem;
+  clip-path: polygon(
+    0% 50%,
+    50% 0%,
+    50% 25%,
+    100% 25%,
+    100% 75%,
+    50% 75%,
+    50% 100%
+  );
 }
 
+.right-arrow {
+  position: relative;
+  clip-path: polygon(
+    50% 25%,
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    50% 75%,
+    0% 75%,
+    0% 25%
+  );
+}
+/* 
 .image-box::before {
   content: "";
   display: block;
@@ -97,6 +130,7 @@
   transform: translate(-50%, -50%);
   z-index: -1;
   background-color: #fdf2e9;
+  background-color: #473a2e;
 }
 .image-box::after {
   content: "";
@@ -110,14 +144,14 @@
   transform: translate(-50%, -50%);
   z-index: -1;
   background-color: #efab6f;
-}
-.grid {
+} */
+/* .grid {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
-}
+} */
 
-.grid--1-cols {
+/* .grid--1-cols {
   grid-template-columns: 1fr;
   justify-content: center;
 }
@@ -132,67 +166,77 @@
 }
 .grid--centre-v {
   align-items: center;
-}
+} */
 
-@media screen and (max-width: 694px) {
-  .how-it-works-bg {
-    background-color: #0a2540;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+/* @media how it works */
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 80%;
   }
-  .heading-h3 {
-    font-size: 2.5rem;
-    line-height: 1.2rem;
-    margin-bottom: 3.2rem;
-    color: #fff;
-  }
-  .steps {
-    font-size: 4.6rem;
-    font-weight: 600;
-    color: rgb(16, 23, 165);
-    margin-bottom: 1.2rem;
+  .how-it-works-container {
+    column-gap: 9rem;
+    margin-bottom: 12rem;
+    transform: scale(0.9);
   }
 }
-@media screen and (max-width: 608px) {
-  .how-it-works-bg {
-    background-color: #0a2540;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+@media (max-width: 1800px) {
+  html {
+    font-size: 50%;
   }
-  .heading-h3 {
-    font-size: 2rem;
-    line-height: 1.2rem;
-    margin-bottom: 3.2rem;
-    color: #fff;
-  }
-  .steps {
-    font-size: 4.6rem;
-    font-weight: 600;
-    color: rgb(16, 23, 165);
-    margin-bottom: 1.2rem;
+  .how-it-works-container {
+    column-gap: 9rem;
+    margin-bottom: 12rem;
+    transform: scale(0.9);
   }
 }
-@media screen and (min-width: 480px) and (max-width: 525px) {
-  .how-it-works-bg {
-    background-color: #0a2540;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
   }
-  .heading-h3 {
-    font-size: 1.7rem;
-    line-height: 1.2rem;
-    margin-bottom: 3.2rem;
-    color: #fff;
+  .how-it-works-container {
+    display: flex;
+    justify-content: center;
   }
-  .steps {
-    font-size: 3.6rem;
+  .image-box {
+    display: none;
+  }
+  #display-on-media {
+    display: block;
+    font-size: 8.6rem;
     font-weight: 600;
-    color: rgb(16, 23, 165);
-    margin-bottom: 1.2rem;
+    color: green;
   }
-  .description {
-    line-height: 1.8rem;
-    list-style: none;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: 400;
-    line-height: 1.5;
+  .how-it-works-bg {
+    padding: 4rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  .how-it-works-container {
+    display: flex;
+    justify-content: center;
+  }
+  .image-box {
+    display: none;
+  }
+  #display-on-media {
+    display: block;
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: green;
+  }
+  .how-it-works-bg {
+    padding: 2rem;
+  }
+  .howItWorks-title {
+    font-size: 3.4rem;
+    color: #444;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin: 5rem auto;
+    /* padding-top: 10rem; */
   }
 }

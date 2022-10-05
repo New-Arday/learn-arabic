@@ -1,148 +1,130 @@
 /* LIST OF LESSONS SECTION*/
-.list-of-lessons-bg {
-  transform: scale(0.5);
-  height: 70.6rem;
-  margin-top: -9rem;
-  margin-bottom: 18rem;
-}
 
+.list-of-lessons-section {
+  display: grid;
+  justify-content: center;
+  padding: 7rem 10rem 10rem 10rem;
+}
 .list-of-lessons-container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  transform: scale(0.7);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .lessons-list-title {
-  /* display: inline-block;
-  margin-bottom: -5rem;
-  margin-top: 7rem;
   font-size: 4.4rem;
-  color: #555;
-  text-align: center; */
-  font-size: 4.4rem;
-  color: #555;
-  line-height: 1.2;
-  padding-top: 7rem;
-  margin-bottom: 13rem;
+  color: #444;
+  letter-spacing: 0.3rem;
   text-align: center;
+  margin: 5rem auto;
 }
 
 .lessons-lists {
-  /* margin: 0 1rem; */
-  padding: 2.4rem;
-  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.07);
-  border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0px 5px 30px 2px;
+  margin: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
 }
-.cards img {
+.cards-img {
+  width: 80%;
   border-radius: 1.2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  background-position: center;
+  margin-top: 3rem;
 }
 .topic-img {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
   opacity: calc(0.7);
 }
 .topic-name {
   text-decoration: none;
-  color: rgb(47, 44, 44);
+  color: #444;
   font-size: 4rem;
   font-weight: 500;
-  text-align: center;
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
-  z-index: 1;
+  display: inline-block;
 }
 .topic-name:hover {
   color: #eb7e22;
 }
 
-.grid--1-cols {
-  grid-template-columns: 1fr;
-  justify-content: center;
-}
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-.grid--centre-v {
-  align-items: center;
-}
-.list-of-lessons-section {
-  padding: 0;
-  row-gap: 0;
-  width: 100%;
+@media screen and (max-width: 1800px) {
+  html {
+    font-size: 50%;
+  }
+  .topic-name {
+    font-size: 2.7rem;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 1200px) {
-  .list-of-lessons-container {
-    max-width: 100%;
-    /* padding: 10rem; */
-    margin: 0 auto;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-evenly;
-    transform: scale(0.5);
-  }
-  .lessons-list-title {
-    margin-bottom: -10rem;
-    margin-top: 7rem;
-    font-size: 4.4rem;
-    color: #555;
-    text-align: center;
+  html {
+    font-size: 50%;
   }
 }
-@media screen and (max-width: 900px) {
-  .list-of-lessons-container {
-    max-width: 100%;
-    padding: 10rem;
-    margin: 0 auto;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-evenly;
-    transform: scale(0.4);
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 40%;
   }
-  .lessons-list-title {
-    margin-bottom: -5rem;
-    margin-top: 7rem;
-    font-size: 3.4rem;
-    color: #555;
-    text-align: center;
+  .list-of-lessons-section {
+    padding: 7rem;
   }
 }
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 838px) {
+  html {
+    font-size: 35%;
+  }
+  .list-of-lessons-section {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .list-of-lessons-section {
+    padding: 3.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
   .list-of-lessons-container {
-    width: 100%;
+    max-width: 80%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    transform: scale(0.4);
-  }
-  .lessons-list-title {
-    margin-bottom: -5rem;
-    margin-top: 7rem;
-    font-size: 3.4rem;
-    font-size: 30px !important;
-    color: #555;
-    text-align: center;
-  }
-  .lessons-lists {
-    /* margin: 0 1rem; */
-    width: 100%;
-    padding: 2.4rem;
-    box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.07);
-    border-radius: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .topic-name {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .cards-img {
+    width: 80%;
+    border-radius: 1.2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-position: center;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .topic-name {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .lessons-list-title {
+    font-size: 3.4rem;
+    color: #444;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin: 5rem auto;
   }
 }

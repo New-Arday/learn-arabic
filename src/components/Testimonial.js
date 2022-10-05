@@ -17,8 +17,9 @@ function Testimonial() {
     setIndex((index - 1) % 3);
   };
   return (
-    <>
-      <section className="testimonial-carousel grid ">
+    <div className="testimonial-container">
+      <h2 className="testimonial-title">Our users are seeing results</h2>
+      <section className="testimonial-carousel ">
         {index === 0 && (
           <div className="per-user">
             <img src={ChildrenLearning} alt="" className="testimonial-image" />
@@ -60,11 +61,9 @@ function Testimonial() {
                 aperiam aspernatur. Odit fugit ipsam ab aut iste cumque tempore
                 reiciendis iste, numquam possimus!"
               </p>
-              <p className=" testimonial-author">Cooper Primary School</p>
+              <p className=" testimonial-author"> Ms Kelly Smith</p>
 
-              <p className=" testimonial-job-title">
-                Head of Language Department
-              </p>
+              <p className=" testimonial-job-title">Human Resource Manager</p>
             </blockquote>
           </div>
         )}
@@ -82,16 +81,14 @@ function Testimonial() {
                 aperiam aspernatur. Odit fugit ipsam ab aut iste cumque tempore
                 reiciendis iste, numquam possimus!"
               </p>
-              <p className=" testimonial-author">Cooper Primary School</p>
+              <p className=" testimonial-author"> Ms J Abrahim</p>
 
-              <p className=" testimonial-job-title">
-                Head of Language Department
-              </p>
+              <p className=" testimonial-job-title">Parent</p>
             </blockquote>
           </div>
         )}
       </section>
-    </>
+    </div>
   );
 }
 

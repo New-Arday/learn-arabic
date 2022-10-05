@@ -12,6 +12,7 @@ function App() {
   const [lessons, setLessons] = useState([]);
   return (
     <>
+      {/* <Header /> */}
       <Routes>
         <Route
           path="/"

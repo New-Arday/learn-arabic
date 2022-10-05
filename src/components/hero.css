@@ -1,43 +1,46 @@
-.hero-img {
+.hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
   position: relative;
   background-size: cover;
+  background-position: right;
   color: #fff;
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
+      rgba(34, 34, 34, 0.9),
+      rgba(34, 34, 34, 0.9)
     ),
     url(img/kid-learning-min.jpg);
 }
 
-.hero-container {
+.hero__text-box {
   width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  padding: 0 3rem;
 }
 
-.hero-container-space {
-  width: 50%;
+.hero__container-space {
+  max-width: 50%;
 }
-h1 {
-  font-size: 4.8rem;
-  margin-bottom: 48px;
+.hero__heading-primary {
+  font-size: 7rem;
+  margin-bottom: 4rem;
 }
-.hero-p {
-  font-size: 20px;
+.hero__description {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
   line-height: 1.6;
   margin-bottom: 48px;
 }
 
-.hero-btn:link,
-.hero-btn:visited {
+.btn:link,
+.btn:visited {
   display: inline-block;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
@@ -51,7 +54,8 @@ h1 {
 }
 .btn--full:hover,
 .btn--full:active {
-  background-color: #eb7e22;
+  /* background-color: rgb(8, 133, 129); */
+  filter: brightness(150%);
 }
 .start-btn:link,
 .start-btn:visited {
@@ -60,39 +64,149 @@ h1 {
 }
 .start-btn:hover,
 .start-btn:active {
-  background-color: rgb(4, 54, 52);
+  filter: brightness(150%);
+  color: #333;
 }
 
 .margin-right-sm {
   margin-right: 1.6rem;
 }
 
-@media screen and (max-width: 600px) {
+/* @media hero section*/
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 1800px) {
+  html {
+    font-size: 70%;
+  }
+}
+/* @media (max-width: 1800px) {
+  html {
+    font-size: 60%;
+  }
+  .hero__container-space {
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+  }
+} */
+/* @media (max-width: 812px) {
+  html {
+    font-size: 50%;
+  }
+  .hero__text-box {
+    position: relative;
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .hero__container-space {
+    max-width: 100%;
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+    text-align: center;
+  }
+} */
+/* @media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+} */
+/* @media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+
+} */
+/* @media (max-width: 660px) {
+  html {
+    font-size: 50%;
+  }
+  .hero__container-space {
+    max-width: 100%;
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__text-box {
+    position: relative;
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+  }
+} */
+
+@media (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+    width: 50%;
+  }
+  .hero__container-space {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+  }
+  .hero__container-space {
+    max-width: 100%;
+  }
 }
 
-/* .home-container {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
+@media (max-width: 370px) {
+  html {
+    font-size: 50%;
+  }
+
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+  }
+  .hero__container-space {
+    max-width: 100%;
+  }
 }
-.hero-img {
-  width: 100%;
-} */
-/* .lesson-btn:link,
-.lesson-btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  transition: background-color 0.3s;
-} */
-/* .layered-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-} */
-/* .layered-images {
-  background-color: #fdf2e9;
-} */
+@media (max-width: 280px) {
+  html {
+    font-size: 30%;
+  }
+
+  .margin-right-sm {
+    margin: 1rem;
+    text-align: center;
+  }
+  .hero__container-space {
+    max-width: 100%;
+  }
+}

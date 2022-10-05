@@ -23,7 +23,6 @@ function Lessons({ setLessons, lessons }) {
               return (
                 <div key={lesson.id} className="lessons-lists">
                   <div className="topic-img">
-                    {" "}
                     <img src={lesson.image} alt="" />
                   </div>
                   <Link to={`/lesson/${lesson.id}`} className="topic-name">

@@ -11,10 +11,7 @@ function CardLessons({ setLessons, lessons }) {
   }, [setLessons]);
 
   return (
-    <section
-      className="list-of-lessons-section  cards grid--1-cols grid"
-      id="lessons"
-    >
+    <section className="list-of-lessons-section" id="lessons">
       <h2 className="lessons-list-title">Choose a topic to explore</h2>
       <ul className="list-of-lessons-container">
         {lessons.map((lesson) => {
@@ -22,10 +19,10 @@ function CardLessons({ setLessons, lessons }) {
             <div key={lesson.id} className="lessons-lists">
               <div className="topic-img">
                 {" "}
-                <img src={lesson.image} alt="" />
+                <img className="cards-img" src={lesson.image} alt="" />
               </div>
               <Link to={`/lesson/${lesson.id}`} className="topic-name">
-                <div className="topic-name"> {lesson.lesson}</div>
+                <div> {lesson.lesson}</div>
               </Link>
             </div>
           );

@@ -3,28 +3,23 @@ import "./hero.css";
 function Hero() {
   return (
     <>
-      <div className="hero-img">
-        <div className="hero-container">
-          <div className="hero-container-space">
-            <div className="hero-title">
-              <h1>Gateway to Arabic</h1>
-            </div>
-            <p className="hero-p">
+      <div className="hero">
+        <div className="hero__text-box">
+          <div className="hero__container-space">
+            <h1 className="hero__heading-primary">Gateway to Arabic</h1>
+
+            <p className="hero__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit aperiam quis doloribus ipsum accusantium tempore
-              alias! Laudantium unde libero nobis adipisci odio tenetur, quia,
-              ratione commodi rerum sunt optio ullam.
+              alias! Laudantium unde libero nobis.
             </p>
             <a
               href="#lessons"
-              className="hero-btn btn--full start-btn margin-right-sm"
+              className="btn btn--full start-btn margin-right-sm"
             >
               Start learning
             </a>
-            <a
-              href="#how-it-works"
-              className="hero-btn btn--full margin-right-sm"
-            >
+            <a href="#how-it-works" className="btn btn--full margin-right-sm">
               Learn more
             </a>
           </div>

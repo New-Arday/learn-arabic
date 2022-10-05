@@ -31,7 +31,7 @@ function Lesson({ setLessons, lessons }) {
       });
   }, [id]);
   if (!lesson) {
-    return <></>;
+    return;
   }
 
   const lessonWordSlideHandler = () => {
@@ -42,13 +42,13 @@ function Lesson({ setLessons, lessons }) {
   };
 
   return (
-    <>
+    <div className="lesson-container">
       <Header displayQuizBtn={displayQuizBtn} />
 
-      <div>{lessons.lesson}</div>
-
-      <h2 className="title-topic">{lesson.lesson}</h2>
-      <p className="lesson-paragraph">{lesson.paragraph}</p>
+      <div className="lesson-header">
+        <h2 className="title-topic">{lesson.lesson}</h2>
+        <p className="lesson-paragraph">{lesson.paragraph}</p>
+      </div>
       <div className="lesson-carousel">
         <img src={lesson.words[index].image} alt="" className="lesson-image" />
         <div className=" lesson-text">
@@ -77,7 +77,7 @@ function Lesson({ setLessons, lessons }) {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

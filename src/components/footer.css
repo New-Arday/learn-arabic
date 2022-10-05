@@ -1,5 +1,17 @@
 .footer {
   background-color: #0a2540;
-
-  height: 8rem;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  height: 6rem;
 }
+.footer p {
+  color: #fff;
+  padding: 2rem;
+}
+/* .grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+} */
