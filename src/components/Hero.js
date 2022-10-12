@@ -9,9 +9,10 @@ function Hero() {
             <h1 className="hero__heading-primary">Gateway to Arabic</h1>
 
             <p className="hero__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit aperiam quis doloribus ipsum accusantium tempore
-              alias! Laudantium unde libero nobis.
+              Our mission at Gateway to Arabic is to make learning Arabic easier
+              for students who want to learn basic Arabic words and phrases. We
+              do this by creating interactive learning opportunities that are
+              fun, engaging, and easy to use.
             </p>
             <a
               href="#lessons"
